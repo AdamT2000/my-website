@@ -15,26 +15,28 @@
 {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25;
-    color:#818181;
+    font-size: 20px;
+    color:#000;
     display: block;
 }
 
 .sidenav a:hover
 {
-    color: #f1f1f1;
+    color: #717171;
 }
 
-.main
+body
 {
-    margin-left:160px;
+    margin-left: 160px;
     padding: 0px 10px;
 }
 
-.h1
+h1
 {
+    height: 50px;
+    padding: 0 0 0 0;
     color: #f1f1f1;
-    background: #000000;
+    background-color: #000000;
 }
 
 /*I found a method to shrink the navbar if it detects a tiny screen*/
