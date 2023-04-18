@@ -1,0 +1,55 @@
+.sidenav
+{
+    font-family: calibri;
+    font-weight:bold;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #6f9;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a
+{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color:#000;
+    display: block;
+}
+
+.sidenav a:hover
+{
+    color: #717171;
+}
+
+.header
+{
+    width: 100%; 
+    height: 50px;
+    padding: 0px 0px 30px 0px;
+    color: #f1f1f1;
+    border-style: solid;
+    border-color: #000;
+    background-color: #000;
+    display: block;
+}
+
+body
+{
+    font-family: sans-serif;
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+/*I found a method to shrink the navbar if it detects a tiny screen*/
+@media screen and (ax-height: 450px)
+{
+    .sidenav {padding-top: 15px;}
+    .sidenav a{font-size: 18px;}
+}
+
