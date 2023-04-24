@@ -1,23 +1,23 @@
 .sidenav
 {
-    font-family: calibri;
+    font-family: calibri, serif;
     font-weight:bold;
     height: 100%;
-    width: 160px;
+    width: 10vw; /*old 160px*/
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #6f9;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 0.5vmax;
 }
 
 .sidenav a
 {
-    padding: 6px 8px 6px 16px;
+    padding: 0.5vmax 0.5vmax 0.5vmax 1vmax; /*old 6px 8px 6px 16px*/
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.2vmax; /*old 20px*/
     color:#000;
     display: block;
 }
@@ -30,24 +30,26 @@
 .header
 {
     width: 100%; 
-    height: 50px;
-    padding: 0px 0px 30px 0px;
+    height: 5vw;
+    padding: 0vw 0vw 5vw 0vw;
     color: #f1f1f1;
     border-style: solid;
     border-color: #000;
     background-color: #000;
     display: block;
+    font-size: 2vw;
+    text-shadow: 0.4vw 0.2vw #878787;
 }
 
 body
 {
     font-family: sans-serif;
-    margin-left: 160px;
-    padding: 0px 10px;
+    margin-left: 9vw;
+    padding: 0vw 1.3vw;
 }
 
 /*I found a method to shrink the navbar if it detects a tiny screen*/
-@media screen and (ax-height: 450px)
+@media (pointer:none), (pointer:coarse)
 {
     .sidenav {padding-top: 15px;}
     .sidenav a{font-size: 18px;}
