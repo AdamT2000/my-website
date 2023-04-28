@@ -5,7 +5,7 @@
     height: 100%;
     width: 10vw; /*old 160px*/
     position: fixed;
-    z-index: 1;
+    z-index: 1vw;
     top: 0;
     left: 0;
     background-color: #6f9;
@@ -38,8 +38,9 @@
     background-color: #000;
     display: block;
     font-size: 2vw;
-    text-shadow: 0.4vw 0.2vw #878787;
+    text-shadow: 0.25vw 0.2vw #878787;
 }
+
 
 body
 {
@@ -48,6 +49,10 @@ body
     padding: 0vw 1.3vw;
 }
 
+*[h2]
+{
+    font-size: 10px;
+}
 /*I found a method to shrink the navbar if it detects a tiny screen*/
 @media (pointer:none), (pointer:coarse)
 {
