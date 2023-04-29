@@ -4,18 +4,19 @@
     <head>
         <meta charset="UTF-8">
         <title>IBM Model M Keyboards</title>
-        <link rel="stylesheet" href="../../styles.css">
+        <link rel="stylesheet" href="/../styles.css">
+        <link rel="stylesheet" href="bbs.css">
     </head>
 
     <main>
         <body>
             <!-- This is the top navigation bar :3-->
             <div class="sidenav">
-                <a href="../index.html">Home</a>
+                <a href="../pages/index.html">Home</a>
                 <a href="#">Placeholder1</a>
                 <a href="#">Placeholder2</a>
-                <a href="../pages/bbs/bbs.html">BBS</a>
-                <a href="../pages/aboutme.html">About</a>
+                <a href="/pages/bbs/bbs.html">BBS</a>
+                <a href="/pages/aboutme.html">About</a>
             </div>
 
             <div class="header">
@@ -30,20 +31,22 @@
                 </div>
               
                 <form onsubmit="showInput()" id="theForm">
-                  <textarea class="message" type="text" id="userInput"></textarea><br/>
-                  <input type="submit" value="Submit">
+                    <textarea class="title" type="text" id="userTitle" maxlength="128" required="true" rows="1" cols="60" placeholder="title"></textarea><br/>
+                    <textarea class="message" type="text" id="userMessage" maxlength="2048" required="true" rows="5" cols="60" placeholder="message"></textarea><br/>
+                    <p>what's 7 + 12? <textarea class="test" type="text" id="usertest" required="true" rows="1" cols="10" placeholder="capcha"></textarea><br/></p>
+
                 </form>
               
               
                 <div class="display-area">
-                  Comments:
+                  
                 </div>
 
                 <p>
                     <span id="display"></span>
                 </p>
             </section>
-
+            
             <script>
                 function showInput() 
                 {
@@ -88,6 +91,6 @@
     <footer>
         <!-- I figured out how to make lines! -->
         <hr>
-        <p> <marquee scrollamount="30">Silly website for CIS155 Web Development, April 2023</marquee></p>
+        <p> <marquee scrollamount="7">Silly website for CIS155 Web Development, April 2023</marquee></p>
     </footer>
 </html>
