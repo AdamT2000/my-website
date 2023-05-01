@@ -53,9 +53,16 @@ p
 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 *[h2]
 {
     font-size: 10px;
+}
+
+main > img
+{
+    text-align: center;
+    padding: 10px 20px;
 }
 /*I found a method to shrink the navbar if it detects a tiny screen*/
 @media (pointer:none), (pointer:coarse)

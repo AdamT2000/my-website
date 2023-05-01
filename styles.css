@@ -53,6 +53,11 @@ body
 {
     font-size: 10px;
 }
+
+#emph
+{
+    color: red;
+}
 /*I found a method to shrink the navbar if it detects a tiny screen*/
 @media (pointer:none), (pointer:coarse)
 {
