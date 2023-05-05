@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <!-- This is a silly little experiment in seeing if I still understand JS enough to make a basic chatboard -->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>IBM Model M Keyboards</title>
-        <link rel="stylesheet" href="../../styles.css">
-        <link rel="stylesheet" href="bbs.css">
-    </head>
-
     <main>
+        <head>
+            <meta charset="UTF-8">
+            <title>IBM Model M Keyboards</title>
+            <link rel="stylesheet" href="../styles/styleNew.css">
+            <link rel="stylesheet" href="bbs.css">
+        </head>
+
         <body>
             <!-- This is the top navigation bar :3-->
             <div class="sidenav">
                 <a href="/index.html">Home</a>
-                <a href="#">Placeholder1</a>
+                <a href="../modelm.html">ModelM</a>
                 <a href="../pirateposting.html">Pirate</a>
-                <a href="#">BBS</a>
+                <a class="active" href="bbs.html">BBS</a>
                 <a href="../aboutme.html">About</a>
             </div>
 
@@ -34,7 +34,7 @@
                     <textarea class="title" type="text" id="userTitle" maxlength="128" required="true" rows="1" cols="60" placeholder="title"></textarea><br/>
                     <textarea class="message" type="text" id="userMessage" maxlength="2048" required="true" rows="5" cols="60" placeholder="message"></textarea><br/>
                     <p>what's 7 + 12? <textarea class="test" type="text" id="usertest" required="true" rows="1" cols="10" placeholder="capcha"></textarea><br/></p>
-
+                    <button type="submit">Submit</button>
                 </form>
               
               
@@ -45,6 +45,8 @@
                 <p>
                     <span id="display"></span>
                 </p>
+
+                <p>this function doesn't save anything to a server due to static page limitaions</p>
             </section>
             
             <!--This makes a chat window, but unfortunately since I can't make PHP code (serverside) this is gonna stay as is-->
@@ -86,7 +88,6 @@
                     //still haven't gotten a way to save input text, but this works as is
                 }
             </script>
-        <p>this function doesn't save anything to a server due to static page limitaions</p>
         </body>
     </main>
 
