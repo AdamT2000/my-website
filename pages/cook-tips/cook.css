@@ -1,12 +1,12 @@
 /* BBS STYLESHEET */
-.sidenav 
+nav 
 {
     background-color: #333;
     background-image: linear-gradient(to top, #000000, #474747);
     overflow: hidden;
 }
 
-.sidenav a 
+nav a 
 {
     float: left;
     color: #f2f2f2;
@@ -16,12 +16,12 @@
     font-size: 150%;
 }
 
-.sidenav a:hover
+nav a:hover
 {
     background-image: linear-gradient(to top, #383838, #8a8a8a);
 }
 
-.sidenav a.active
+nav a.active
 {
     background-image: linear-gradient(to top, 	#38A038, 	#53E153);
 }
@@ -37,7 +37,7 @@
     border-style:groove
 }
 
-.header 
+header 
 {
     width: 100%; 
     height: 1%;
@@ -66,7 +66,6 @@ body
 {
     font-family: sans-serif;
     margin: 0;
-    
 }
 
 section

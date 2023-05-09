@@ -1,96 +1,95 @@
 <!DOCTYPE html>
 <!-- This is a silly little experiment in seeing if I still understand JS enough to make a basic chatboard -->
 <html lang="en">
-    <main>
-        <head>
-            <meta charset="UTF-8">
-            <title>IBM Model M Keyboards</title>
-            <link rel="stylesheet" href="../styles/styleNew.css">
-            <link rel="stylesheet" href="bbs.css">
-        </head>
+    <head>
+        <meta charset="UTF-8">
+        <title>IBM Model M Keyboards</title>
+        <link rel="stylesheet" href="../styles/styleNew.css">
+        <link rel="stylesheet" href="bbs.css">
+    </head>
 
-        <body>
-            <!-- This is the top navigation bar :3-->
-            <div class="sidenav">
-                <a href="/index.html">Home</a>
-                <a href="../modelm.html">ModelM</a>
-                <a href="../pirateposting.html">Pirate</a>
-                <a class="active" href="bbs.html">BBS</a>
-                <a href="/pages/cook-tips/cookingtips.html">Cooking</a>
-                <a href="../aboutme.html">About</a>
+    <body>
+        <!-- This is the top navigation bar :3-->
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="../modelm.html">ModelM</a>
+            <a href="../pirateposting.html">Pirate</a>
+            <a class="active" href="bbs.html">BBS</a>
+            <a href="../cook-tips/cookingtips.html">Cooking</a>
+            <a href="../aboutme.html">About</a>
+        </nav>
+
+        <header>
+            <h1>The Bulleten Board System!</h1>
+        </header>
+
+        
+        <main>
+            <div class="title">
+                <h2>
+                Leave a message (plz be nice)
+                </h2>
             </div>
-
-            <div class="header">
-                <h1>The Bulleten Board System!</h1>
-            </div>
-
-            <section class="message-board">
-                <div class="title">
-                  <h2>
-                    Leave a message (plz be nice)
-                  </h2>
-                </div>
-              
-                <form onsubmit="showInput()" id="theForm">
-                    <textarea class="title" type="text" id="userTitle" maxlength="128" required="true" rows="1" cols="60" placeholder="title"></textarea><br/>
-                    <textarea class="message" type="text" id="userMessage" maxlength="2048" required="true" rows="5" cols="60" placeholder="message"></textarea><br/>
-                    <p>what's 7 + 12? <textarea class="test" type="text" id="usertest" required="true" rows="1" cols="10" placeholder="capcha"></textarea><br/></p>
-                    <button type="submit">Submit</button>
-                </form>
-              
-              
-                <div class="display-area">
-                  
-                </div>
-
-                <p>
-                    <span id="display"></span>
-                </p>
-
-                <p>this function doesn't save anything to a server due to static page limitaions</p>
-            </section>
             
-            <!--This makes a chat window, but unfortunately since I can't make PHP code (serverside) this is gonna stay as is-->
-            <script>
-                function showInput() 
+            <form onsubmit="showInput()" id="theForm">
+                <textarea class="title" type="text" id="userTitle" maxlength="128" required="true" rows="1" cols="60" placeholder="title"></textarea><br/>
+                <textarea class="message" type="text" id="userMessage" maxlength="2048" required="true" rows="5" cols="60" placeholder="message"></textarea><br/>
+                <p>what's 7 + 12? <textarea class="test" type="text" id="usertest" required="true" rows="1" cols="10" placeholder="capcha"></textarea><br/></p>
+                <button type="submit">Submit</button>
+            </form>
+            
+            
+            <div class="display-area">
+                
+            </div>
+
+            <p>
+                <span id="display"></span>
+            </p>
+
+            <p>this function doesn't save anything to a server due to static page limitaions</p>
+        </main>
+        
+        <!--This makes a chat window, but unfortunately since I can't make PHP code (serverside) this is gonna stay as is-->
+        <script>
+            function showInput() 
+            {
+                //gets date for time stamps
+                var currentTime = new Date()
+                var hours = currentTime.getHours()
+                var minutes = currentTime.getMinutes()
+                //makes time look right
+                if (minutes < 10)
                 {
-                    //gets date for time stamps
-                    var currentTime = new Date()
-                    var hours = currentTime.getHours()
-                    var minutes = currentTime.getMinutes()
-                    //makes time look right
-                    if (minutes < 10)
-                    {
-                        minutes = "0" + minutes;
-                    }
-                    //makes the time in 12 hr format instead 24
-                    if(hours > 12)
-                    {
-                        hours = hours - 12;
-                        minutes = minutes + "pm";
-                    }
-                    else
-                    {
-                        minutes = minutes + "am";
-                    }
-                    //makes the time displayed correctly
-                    var time = ("[" + hours + ":" + minutes + "] ");
-
-                    console.log('showInput called...')
-                    event.preventDefault()
-                    var userInput = document.getElementById("userInput").value;
-                    var display = document.getElementById("display");
-                    var theForm = document.getElementById("theForm");
-                    var linebreak = document.createElement("br");
-                    display.insertAdjacentHTML('beforeend', time + userInput);
-                    display.appendChild(linebreak);
-                    theForm.reset();
-
-                    //still haven't gotten a way to save input text, but this works as is
+                    minutes = "0" + minutes;
                 }
-            </script>
-        </body>
-    </main>
+                //makes the time in 12 hr format instead 24
+                if(hours > 12)
+                {
+                    hours = hours - 12;
+                    minutes = minutes + "pm";
+                }
+                else
+                {
+                    minutes = minutes + "am";
+                }
+                //makes the time displayed correctly
+                var time = ("[" + hours + ":" + minutes + "] ");
+
+                console.log('showInput called...')
+                event.preventDefault()
+                var userInput = document.getElementById("userInput").value;
+                var display = document.getElementById("display");
+                var theForm = document.getElementById("theForm");
+                var linebreak = document.createElement("br");
+                display.insertAdjacentHTML('beforeend', time + userInput);
+                display.appendChild(linebreak);
+                theForm.reset();
+
+                //still haven't gotten a way to save input text, but this works as is
+            }
+        </script>
+    </body>
 
     <footer>
         <hr>
