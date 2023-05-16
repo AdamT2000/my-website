@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+/*Navigation*/
 nav
 {
     background-color: #333;
@@ -12,12 +13,14 @@ nav
 
 nav a 
 {
+    display: flex;
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 1vw 1.2vw;
+    padding: 0.5% 0.6%;
     text-decoration: none;
     font-size: 150%;
+    align-items: baseline;
 }
 
 nav a:hover
@@ -30,23 +33,37 @@ nav a.active
     background-image: linear-gradient(to top, 	#38A038, 	#53E153);
 }
 
+/*Main Text*/
 header 
 {
     width: 100%; 
-    padding: 0% 0% 1% 0%;
+    height: 20%;
+    max-height: 200px;
+    padding: 0% 0% 0% 0%;
     color: #f1f1f1;
     border-style: solid;
     border-color: #000;
     background-color: #000;
     display: block;
-    font-size: 300%;
-    text-shadow: 4px 3px #878787;
-    text-overflow: clip;
-    text-align: center;
     border-bottom-style:double;
-    border-bottom-color: #38A038;
+    border-bottom-color: #389f38;
     border-bottom-width: 8px;
     
+}
+
+header h1
+{
+    max-height: 250px;
+    font-size: 400%;
+    text-shadow: 3px 4px #878787;
+    text-overflow: clip;
+    text-align: center;
+}
+
+header h1 img
+{
+    height: 5%;
+    max-width: 5%;
 }
 
 h2, h3, p
@@ -55,14 +72,69 @@ h2, h3, p
 }
 
 body
-{
+{  
     font-family: sans-serif;
     padding:0;
     margin:0;
 }
 
-main
+body img
+{
+    height: auto;
+    max-width: 50%;
+}
+/*Aside bar*/
+aside /*Parent formatting*/
+{
+    box-sizing: border-box;
+    width: 26%;
+	float: right;
+    margin: 2% 0 0 2%;
+	border: 3px solid #38A038;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+aside h2
+{
+    margin:0;
+    padding: 2% 0 2% 0;
+    width: 100%;
+    color: #ebf9ee;
+	font-size: 100%;
+    background-color:#000;
+    text-align: center;
+    border-style: none groove;
+    border-right: 0.5px solid #389f38;
+    border-left: 0.5px solid #389f38;
+}
+
+
+aside h3
+{
+    font-size: 105%;
+	padding-bottom: .25em;
+}
+
+aside p
+{
+    font-size: 110%;
+    margin: 4%;
+}
+/*Offset so text is away from the sides of the screen*/
+main, main content
 {
     margin-left: 3vw;
     margin-right: 3vw;
+}
+
+/*Breakpoint 1*/
+@media screen and (max-width: 640px)
+{
+    header h1
+    {
+        max-height: 150px;
+        font-size: 200%;
+        text-shadow: 1.5px 1px #878787;
+    }
 }

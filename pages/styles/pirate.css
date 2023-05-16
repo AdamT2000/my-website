@@ -1,30 +1,3 @@
-:root
-{
-    margin: 0;
-    padding: 0;
-}
-nav
-{
-    background-color: #333;
-    background-image: linear-gradient(to top, #000000, #474747);
-    overflow: hidden;
-}
-
-nav a 
-{
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 1vw 1.2vw;
-    text-decoration: none;
-    font-size: 150%;
-}
-
-nav a:hover
-{
-    background-image: linear-gradient(to top, #383838, #8a8a8a);
-}
-
 nav a.active
 {
     background-image: linear-gradient(to top, #802a2a, #e15353);
@@ -32,39 +5,8 @@ nav a.active
 
 header 
 {
-    width: 100%; 
-    height: 1%;
-    padding: 0% 0% 1% 0%;
-    color: #f1f1f1;
-    border-style: solid;
-    border-color: #000;
-    background-color: #000;
-    display: block;
-    font-size: 300%;
-    text-shadow: 4px 3px #878787;
-    text-overflow: clip;
-    text-align: center;
-    border-bottom-style:double;
+
     border-bottom-color: #9f3838;
-    border-bottom-width: 8px;
-}
-
-h2, h2
-{
-    font-size: 250%;
-}
-
-body
-{
-    font-family: sans-serif;
-    margin: 0;
-}
-
-
-.content
-{
-    margin-left: 4vw;
-    margin-right: 4vw;
 }
 
 main > img
