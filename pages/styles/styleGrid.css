@@ -1,0 +1,70 @@
+/*GRID LAYOUT (VERY BASIC)*/
+:root
+{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container 
+{
+    display: grid;
+    background-color: #389f38;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-item 
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 100%;
+}
+
+.nav
+{
+    grid-column: 1 / span 3;
+    grid-row: 1;
+
+    background-color: #333;
+    background-image: linear-gradient(to top, #000000, #474747);
+    overflow: hidden;
+}
+
+.nav a
+{
+    display: flex;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.5% 0.6%;
+    text-decoration: none;
+    font-size: 150%;
+    align-items: baseline;
+}
+.nav a:hover
+{
+    background-image: linear-gradient(to top, #383838, #8a8a8a);
+}
+
+.nav a.active
+{
+    background-image: linear-gradient(to top, 	#38A038, 	#53E153);
+}
+.header 
+{
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+.infobox 
+{
+    grid-column: 3;
+    grid-row: 2 / span 3;
+    border-left-style: groove;
+}
+
+.footer
+{
+    grid-row: 4;
+    grid-column: 1 / span 2;
+}
