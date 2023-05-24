@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<!-- This is a silly little webpage detailing all the information i've compiled about a keyboard I've bought-->
+<!--This is my now completely upgraded GRID layout design for the website which hopefully won't break EVERYTHING IN EXISTENCE-->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>IBM Model M Keyboards</title>
-        <link rel="stylesheet" href="styles/styleNew.css">
+        <title>Model M - About</title>
+        <link rel="stylesheet" href="styles\styleGrid.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
-        <nav class="flexnav">
-            <div><a href="../index.html">Home</a></div>
-            <div><a class="active" href="#">ModelM</a></div>
-            <div><a href="pirateposting.html">Pirate</a></div>
-            <div><a href="../pages/bbs/bbs.html" target="_blank" rel="noopener noreferrer">BBS</a></div>
-            <div><a href="aboutme.html">About</a></div>
-        </nav>
+        <div class="grid-container">   
+            <!--NAVIGATION-->
+            <div class="grid-item nav">
+                <div><a href="../index.html">Home</a></div>
+                <div class="active"><a href="modelm.html">ModelM</a></div>
+                <div><a href="pirateposting.html">Pirate</a></div>
+                <div><a href="../pages/bbs/bbs.html" target="_blank" rel="noopener noreferrer">BBS</a></div>
+                <div><a href="aboutme.html">About</a></div>
+            </div> 
 
-        <header>
-            <h1>IBM Model M Keyboards</h1>
-        </header>
-    
-        <main>
-            <aside>
-                <h2>SIDEBAR!</h2>
-                <p>
-                    this is a sidebar which has been formatted to look SUPER COOL becuase I LOVE SIDEBARS!!!
-                </p>
-            </aside>
-            <content>
+            <!--HEADER-->
+            <div class="grid-item header">
+                <h1>IBM Model M Keyboards</h1>
+            </div>
+
+            <!--PUT MAIN CONTENT HERE!-->
+            <div class="grid-item main">
                 <h2>What are they?</h2>
                 <p>
                     This is a paragraph which describes in excruciating and painstaking detail about a specific type of computer keyboard created in 1985. They have been made by a few different companies, most notably:
@@ -55,14 +53,19 @@
                 </p>
                 
                 <img src="../pages/img/myModelM.jpg" alt="My model M keyboard, with a black frame with green and white keys" width="500" height="208">
-            </content>
-        </main>
-    </body>
-    
+            </div>
 
-    <footer>
-        <!-- I figured out how to make lines! -->
-        <hr>
-        <p> <marquee scrollamount="7">Silly website for CIS155 Web Development, April 2023</marquee></p>
-    </footer>
+            <!--PUT SILLY SIDEBAR OR DELETE ENTIRELY-->
+            <div class="grid-item infobox">
+                <p>
+                    THIS IS AN INTRUSIVE SIDEBOX!
+                </p>
+            </div>
+
+            <!--SCROLLING FOOTER PROBABLY DON'T TOUCH-->
+            <div class="grid-item footer">
+                <p> <marquee scrollamount="7">Silly website for CIS155 Web Development, May 2023</marquee></p>
+            </div>
+        </div>
+    </body>
 </html>

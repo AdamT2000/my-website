@@ -11,6 +11,7 @@
     background-color: #389f38;
     margin: 0;
     padding: 0;
+                
 }
 
 .grid-item 
@@ -19,52 +20,111 @@
     text-align: center;
     font-size: 100%;
 }
-
+/*Navbar, utilizing flex boxes*/
 .nav
 {
+    
     grid-column: 1 / span 3;
     grid-row: 1;
 
     background-color: #333;
     background-image: linear-gradient(to top, #000000, #474747);
     overflow: hidden;
-}
-
-.nav a
-{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav div
+{
+    padding: 0.2% 2%;
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 0.5% 0.6%;
-    text-decoration: none;
     font-size: 150%;
-    align-items: baseline;
 }
-.nav a:hover
+.nav a
+{
+    color: #f2f2f2;
+    text-decoration: none;
+}
+.nav div:hover
 {
     background-image: linear-gradient(to top, #383838, #8a8a8a);
 }
 
-.nav a.active
+.nav div.active
 {
     background-image: linear-gradient(to top, 	#38A038, 	#53E153);
 }
+/*HEADERS*/
 .header 
 {
     grid-column: 1 / span 2;
     grid-row: 2;
-}
 
+    max-height: 200px;
+    padding: 0% 0% 0% 0%;
+    color: #f1f1f1;
+    border-style: solid;
+    background-color: #000;
+    display: block;
+}
+.header h1
+{
+    font-family: sans-serif;
+    max-height: 250px;
+    font-size: 400%;
+    text-shadow: 3px 4px #878787;
+    text-overflow: clip;
+    text-align: center;
+}
+/*Main Text*/
+.main
+{
+    font-family: sans-serif;
+    text-align: justify;
+    padding: 2%;
+    text-overflow:ellipsis;
+}
+/*infobox controls*/
 .infobox 
 {
     grid-column: 3;
     grid-row: 2 / span 3;
     border-left-style: groove;
 }
-
+/*Footer controls*/
 .footer
 {
     grid-row: 4;
     grid-column: 1 / span 2;
+}
+
+/*Addresses break issues*/
+@media screen and (max-width: 960px)
+{
+    .nav
+    {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+        flex-direction: column;
+    }
+    .header
+    {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+        padding: 1%;
+    }
+    .infobox
+    {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+        border-style:groove;
+    }
+    .footer
+    {
+        grid-column: 1 / span 3;
+        grid-row: 5;
+        
+    }
 }
