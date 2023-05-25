@@ -1,0 +1,201 @@
+/*This is the FINAL stylesheet for my awesome website
+* 
+* - Features several interesting features like mobile displays and also tries to utilize the flex layout as it makes the most sense.
+* - Made by Adam Tucker, 5/24/23
+*/
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #333;
+}
+/*Navigation Controls
+root nav controls*/
+nav
+{
+    flex: 100%;
+    background-image: linear-gradient(to top, #000000, #474747);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/*Controls each element of the nav*/
+nav a 
+{
+    font-family:sans-serif;
+    padding: 0.2% 2%;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 150%;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    background-image: linear-gradient(to top, #383838, #8a8a8a);
+}
+
+nav a.active
+{
+    background-image: linear-gradient(to top, 	#38A038, 	#53E153);
+}
+/* ==================
+HEADER CONTROLS
+ ================== */
+header 
+{
+    flex: 100%;
+    color: #f1f1f1;
+    background-color: #000;
+    border-bottom-style:double;
+    border-bottom-color: #389f38;
+    border-bottom-width: 8px;
+     
+}
+ 
+header h1
+{
+    max-height: 250px;
+    font-size: 400%;
+    font-family:sans-serif;
+    text-shadow: 3px 4px #878787;
+    text-overflow: clip;
+    text-align: center;
+    
+}
+ 
+header h1 img
+{
+    height: 5%;
+    max-width: 5%;
+}
+/* ==================
+PAGE CONTENT CONTROLS
+ ================== */
+
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main h4
+{
+    font-size: 85%;
+    color:#333
+}
+
+body img
+{
+    height: auto;
+    max-width: 50%;
+}
+
+.main-content
+{
+    flex: 80%;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/*Sidebar stuffs*/
+.sidebar
+{
+    font-family: serif;
+    flex: 10%;
+    max-width: 225px;
+    background-color: #d7ecd7;
+    padding: 0 20px;
+    margin: 0;
+    border-right-style:ridge;
+}
+
+.sidebar h2
+{
+    font-size:100%;
+}
+
+/*THE SIDEBAR NAV BUTTONS!
++===========================+
+*/
+.sidebar-flex
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-basis: 20%
+}
+
+/*controls the look of the actual button*/
+.sidebar-flex>div
+{
+    border-style: outset;
+    border-width: 2px;
+    text-align: center;
+    margin: 2px;
+}
+
+/*controls the text contained within the actual button*/
+.sidebar-flex>div a
+{
+    font-family: sans-serif;
+    color: #000;
+    background-color:#e4e4e4;
+    text-decoration: none;
+    padding-bottom: 0.5px;
+}
+
+.sidebar-flex>div :hover
+{
+    border-width: 4px;
+}
+
+.sidebar-flex>div .active
+{
+    background-color:#bdbdbd;
+}
+
+/*==================
+FOOTER CONTROLS
+==================*/
+
+footer
+{
+    padding: 1px 0px;
+    text-align: center;
+    background: #ddd;
+}
+
+/*==========================================================================================
+                                BREAKPOINT MANAGEMENT!!!!!!!!!!!!
+==========================================================================================*/
+/*fixes the sidebar because it's too big or too small otherwise*/
+@media (max-width: 1140px)
+{
+    .sidebar
+    {
+        max-width: 100%;
+
+    }
+}
+/*What i'd assume a phone screen would be*/
+@media (max-width: 850px)
+{
+    nav
+    {
+        flex-direction: column;
+    }
+    main
+    {
+        flex-wrap: wrap;
+    }
+    .sidebar ul
+    {
+        flex-direction: row;
+    }
+
+}
