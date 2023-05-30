@@ -3,13 +3,21 @@
 * - Features several interesting features like mobile displays and also tries to utilize the flex layout as it makes the most sense.
 * - Made by Adam Tucker, 5/24/23
 */
+@font-face 
+{
+    font-family: IBM;
+    src: url(IBM_VGA_8x16.ttf) format("truetype");
+}
+
 *
 {
     box-sizing: border-box;
 }
+
 body
 {
     background-color: #333;
+    
 }
 /*Navigation Controls
 root nav controls*/
@@ -59,13 +67,12 @@ header
  
 header h1
 {
+    font-family: IBM;
     max-height: 250px;
     font-size: 400%;
-    font-family:sans-serif;
-    text-shadow: 3px 4px #878787;
+    text-shadow: 2px 1px #878787;
     text-overflow: clip;
     text-align: center;
-    
 }
  
 header h1 img
@@ -96,7 +103,7 @@ body img
 }
 
 .main-content
-{
+{ 
     flex: 80%;
     background-color: #ffffff;
     padding: 20px;
