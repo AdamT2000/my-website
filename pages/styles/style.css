@@ -67,7 +67,7 @@ header
  
 header h1
 {
-    font-family: IBM;
+    font-family: IBM, sans-serif;
     max-height: 250px;
     font-size: 400%;
     text-shadow: 2px 1px #878787;
