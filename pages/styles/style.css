@@ -71,7 +71,7 @@ header h1
     font-family: IBM, sans-serif;
     max-height: 250px;
     font-size: 400%;
-    text-shadow: 2px 1px #878787;
+    text-shadow: 3px 2px #878787;
     text-overflow: clip;
     text-align: center;
 }
@@ -110,6 +110,11 @@ body img
     background-color: #ffffff;
     padding: 20px;
     padding-right: 15%;
+}
+
+.main-content img
+{
+    max-width: 35%;
 }
 
 .main-content h3>img
