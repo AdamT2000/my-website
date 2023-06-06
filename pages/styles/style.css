@@ -109,9 +109,17 @@ body img
     flex: 80%;
     background-color: #ffffff;
     padding: 20px;
-    padding-right: 15%;
+    padding-right: 10%;
 }
-
+/*formatting for main content which lacks a sidebar*/
+#no-sidebar
+{
+    flex: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
 .main-content img
 {
     max-width: 35%;
@@ -163,6 +171,8 @@ body img
     border-width: 2px;
     text-align: center;
     margin: 2px;
+    background-color:#e4e4e4;
+    
 }
 
 /*controls the text contained within the actual button*/
@@ -170,19 +180,16 @@ body img
 {
     font-family: sans-serif;
     color: #000;
-    background-color:#e4e4e4;
     text-decoration: none;
-    padding-bottom: 0.5px;
-}
-
-.sidebar-flex>div :hover
-{
-    border-width: 4px;
+    padding: 0.5px;
 }
 
 .sidebar-flex>div .active
 {
+    border-style: none;
+    border-width: 2px;
     background-color:#bdbdbd;
+    
 }
 
 /*==================
@@ -205,7 +212,6 @@ footer
     .sidebar
     {
         max-width: 100%;
-
     }
 }
 /*What i'd assume a phone screen would be*/
@@ -215,13 +221,33 @@ footer
     {
         flex-direction: column;
     }
+    header h1
+    {
+        font-size: 250%;
+        text-shadow: 2px 2px #878787;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
     main
     {
         flex-wrap: wrap;
     }
+    nav a 
+    {
+        padding: 1.2% 100%;
+    }
     .sidebar ul
     {
         flex-direction: row;
+    }
+    .sidebar
+    {
+        max-width: 100%;
+    }
+    .sidebar-flex>div
+    {
+        margin: 3px;
+
     }
     .main-content
     {

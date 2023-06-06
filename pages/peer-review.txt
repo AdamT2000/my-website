@@ -1,0 +1,13 @@
+===============First======================
+2. In the mobile view, the navigational bar for both the home and :3 pages could use enlargening. Not too much to break the aesthetic, but to make it easier to use on mobile.
+ > Added media queries for the nav bar while in mobile view which makes the buttons span the lateral width of the screen. At the same time I also increased their height a little so it's easier to click. This shouldn't break the asthetic but since mobile users care not about the look of a website (if they did they wouldn't be using a phone for web browsing) so i enlargened the buttons to the full width, this honestly looks better.
+
+3. It seems you design the interests pages better for mobile than the other two pages. You probably already had this planned, but applying the scale of the text on the interests page in the mobile view to the other pages would make the whole site much better to read.
+
+ > I adjusted the spacing for the pages lacking a sidebar, since that seems to make it look better in mobile view.
+
+===============Second======================
+4. One change I would make is to change the name home button in the side bar to something like "interests" so that one may not think it is a second home button to take you back to the main page. 
+
+ > Fixed this by changing the button from saying "home" to saying "interests home", hopefully this is more clear to people, i understand the other way was probably rather confusing.
+
